@@ -8,7 +8,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -28,6 +28,6 @@ publish {
     groupId = 'cn.zmy'
     artifactId = 'easykeyboardheight'
     publishVersion = '1.0.0'
-    desc = 'Very easy way to gei the android soft keyboard height'
-    website = 'https://github.com/'
+    desc = 'Very easy way to get the android soft keyboard height'
+    website = 'https://github.com/a3349384/EasyKeyboardHeight'
 }
