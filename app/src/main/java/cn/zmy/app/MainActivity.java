@@ -32,17 +32,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onKeyboardHeightChanged(int height, int orientation)
     {
-        if (height == 0)
-        {
-            //keyboard is closed
-        }
-        else
-        {
-            //keyboard is open, it's height is `height`
-        }
-        String or = orientation == Configuration.ORIENTATION_PORTRAIT ? "portrait" : "landscape";
-        Log.d("MainActivity", "onKeyboardHeightChanged: " + height);
-
+        Log.d("MainActivity", String.format("onKeyboardHeightChanged height=%d, orientation=%s",
+                height, orientation == Configuration.ORIENTATION_PORTRAIT ? "portrait" : "landscape"));
         viewInputContainer.setTranslationY(0 - height);
     }
 
