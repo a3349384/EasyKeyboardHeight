@@ -7,6 +7,7 @@ package cn.zmy.easykeyboradheight;
 import android.app.Activity;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -75,14 +76,18 @@ public class KeyboardHeightProvider extends PopupWindow
      * detach from activity
      */
     public void detach() {
-        popupView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            popupView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        } else {
+            popupView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+        }
         Logger.v("detach success");
     }
 
     /**
      * release，then the provider cannot be reused.
      * */
-    public void destory()
+    public void destroy()
     {
         mKeyboardHeightAware = null;
         activity = null;
