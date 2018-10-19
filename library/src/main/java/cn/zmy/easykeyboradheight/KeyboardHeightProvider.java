@@ -36,8 +36,6 @@ public class KeyboardHeightProvider extends PopupWindow
 
     /**
      * Construct a new KeyboardHeightProvider
-     *
-     * @param activity The parent activity
      */
     public KeyboardHeightProvider(Activity activity, IKeyboardHeightAware keyboardHeightAware) {
         super(activity);
@@ -52,7 +50,7 @@ public class KeyboardHeightProvider extends PopupWindow
         setContentView(popupView);
         parentView = activity.findViewById(android.R.id.content);
 
-        Logger.v("init compeletd");
+        Logger.v("init completed");
     }
 
     /**
@@ -128,7 +126,7 @@ public class KeyboardHeightProvider extends PopupWindow
 
     private void notifyKeyboardHeightChanged(int height, int orientation) {
         if (mKeyboardHeightAware != null) {
-            mKeyboardHeightAware.onKeyboradHeightChanged(height, orientation);
+            mKeyboardHeightAware.onKeyboardHeightChanged(height, orientation);
         }
     }
 }

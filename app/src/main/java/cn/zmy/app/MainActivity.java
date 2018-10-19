@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onKeyboradHeightChanged(int height, int orientation)
+    public void onKeyboardHeightChanged(int height, int orientation)
     {
         String or = orientation == Configuration.ORIENTATION_PORTRAIT ? "portrait" : "landscape";
         Log.d("MainActivity", "onKeyboardHeightChanged: " + height);

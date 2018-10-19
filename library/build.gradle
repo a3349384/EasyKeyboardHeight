@@ -24,7 +24,7 @@ dependencies {
 }
 
 publish {
-    userOrg = 'zmy'
+    userOrg = 'a3349384'
     groupId = 'cn.zmy'
     artifactId = 'easykeyboardheight'
     publishVersion = '1.0.0'

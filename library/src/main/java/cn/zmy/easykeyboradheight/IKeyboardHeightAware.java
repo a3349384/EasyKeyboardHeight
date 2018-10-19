@@ -6,5 +6,5 @@ package cn.zmy.easykeyboradheight;
 
 public interface IKeyboardHeightAware
 {
-    void onKeyboradHeightChanged(int height, int orientation);
+    void onKeyboardHeightChanged(int height, int orientation);
 }
