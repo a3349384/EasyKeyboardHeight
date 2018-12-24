@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity
             //keyboard is open, it's height is `height`
         }
     }
-
-    public void gotoNewActivity(View view)
-    {
-        startActivity(new Intent(this, MainActivity.class));
-    }
 }
 ```
 
